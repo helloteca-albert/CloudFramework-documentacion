@@ -50,7 +50,7 @@ Por ejemplo, accediendo a *api.gcf.com/test/ejemplo1/ejemplo2*, el array contedr
 
 ### checkMandatoryParam
 ```php
-$this->checkMandatoryParam($parameter_position, ["optional"=>$error_m_essage], ["optional"=>$array_of_words_allowed]);
+$this->checkMandatoryParam($parameter_position, $error_m_essage=null, $array_of_words_allowed=null);
 ```
 
 Los parámetros de la función son:
@@ -71,8 +71,14 @@ Esta propiedad es la que almacena los parámetros de la petición recibido tanto
 
 ### checkMandatoryFormParam
 ```php
-$this->checkMandatoryFormParam
+$this->checkMandatoryFormParam($form_param,$error_msg=null);
 ```
+Comprueba si existe el valor indicado en el array de formParams. Básicamente es como hacer un *in_array($formParam, $this->formParams)*. Por lo tanto devolvería un booleano de verdad si existe y falso si no existe.
+
+El parámetro de la función son:
+
+ 1. ***form_param***: Parámetro a comprobar si existe.
+ 2. ***error_msg***: Mensaje de error en caso de que no lo encuentre.
 
 ## DATASTORE
 ...
