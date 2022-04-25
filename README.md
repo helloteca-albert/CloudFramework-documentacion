@@ -166,3 +166,4 @@ Los parámetros de la función son:
     - **'security-error'**
     - **'not-allowed'**
     - **'server-error'**
+ 2. ***extraMsg***: string con mensaje extra del error que quieres que se vea en el cuerpo de la respuesta.
